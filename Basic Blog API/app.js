@@ -85,7 +85,7 @@ app.delete('/posts/:foldername/:postid',async function(req,res){
     try {
         await fs.unlink(filepath);
         await fs.rmdir(folderpath, { recursive: true })
-        res.status(200).send('File and folder deleted successfully'); // Use 200 for successful deletion
+        res.status(200).send('File and folder deleted successfully');
     } catch (err) {
         console.error('Error deleting file:', err);
         res.status(500).send('Error deleting file');
