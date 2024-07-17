@@ -1,0 +1,15 @@
+{
+  "name": "to-do-list-express",
+  "version": "1.0.0",
+  "description": "- **Simple To-Do List API**:\r     - Create a basic CRUD (Create, Read, Update, Delete) API for managing to-do items.\r     - Endpoints: `/todos` (GET, POST), `/todos/:id` (GET, PUT, DELETE).\r     - Use an in-memory store or a JSON file for storing tasks.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
