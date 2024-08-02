@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 //connection
-mongoose.connect("mongodb+srv://chitresh:CHIR2588%7C@learning.lnvqqbh.mongodb.net/contactapi?retryWrites=true&w=majority&appName=Learning")
+mongoose.connect("")
 
 //defining userschema 
 
