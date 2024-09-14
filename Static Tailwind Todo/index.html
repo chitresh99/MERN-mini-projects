@@ -6,10 +6,10 @@
     <title>Static Todo</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class = "bg-blue-800">
-   <nav class = "flex items-center justify-start">
-      <img src="images/sticky-note.png" alt="logo" class = "h-20 object-contain mt-7 mx-10">
-      <ul class = "flex justify-between space-x-20 ml-auto text-white mr-20">
+<body class="bg-blue-800">
+   <nav class="flex items-center justify-between p-5">
+      <img src="images/sticky-note.png" alt="logo" class="h-20 object-contain">
+      <ul class="flex space-x-8 text-white">
         <li>Features</li>
         <li>For teams</li>
         <li>Resources</li>
@@ -17,15 +17,17 @@
       </ul>
    </nav>
 
-   <main class = "h-full flex justify-center ">
-    <h1 class=" justify-evenly ml-auto my-12 font-sans font-bold text-3xl text-white">Organise your work and life</h1>
-    <img src="images/product.png" alt="product" class="rounded-xl ml-auto mr-10">
-    </main>
-    
-    <review>
-        <img src="images/weird footer.png" alt="product" class="h-50 w-full">
-    </review>
+   <main class="flex flex-col items-center justify-center h-screen p-5">
+    <h1 class="font-sans font-bold text-3xl text-white mb-4">Organise your work and life</h1>
+    <img src="images/product.png" alt="product" class="rounded-xl mb-4">
+    <a href="finalproduct.html">
+    <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+        Start
+    </button>
+   </main>
    
-    
+   <footer class="bg-blue-800">
+        <img src="images/weird footer.png" alt="footer" class="w-full">
+   </footer>
 </body>
 </html>
