@@ -110,6 +110,82 @@ app.post('/login', function(req, res) {
     }
 });
 
+
+// app.post('/rentbooks',function(req,res){
+//     try{ 
+//         //not using a loop since it's not an array
+//         let numberofbooks = 0; ;
+//         numberofbooks = parseInt(req.body.numberofbooks, 10);
+//         const response = {
+//             username : req.body.username,
+//             bookname : req.body.bookname,
+//             issuedate : req.body.issuedate,
+//             numberofbooks : numberofbooks,
+//         };
+//         console.log(`Number of books: ${numberofbooks}`);
+//         console.log(JSON.stringify(response));
+//         res.send(JSON.stringify(response));
+//     }
+//     catch(err){
+//         console.log(err)
+//         return res.status(400).json({
+//             message : "Data improper"
+//         })
+//     }
+
+// })
+
+let userdata = [
+    {
+        id: 1,
+        username: "chitresh",
+        numberofbooks: [0],
+        bookname: "none",
+        issuedate: [0]
+    },
+    {
+        id: 2,
+        username: "Krsna",
+        numberofbooks: [0],
+        bookname: "none",
+        issuedate: 12
+    }
+];
+
+app.put('/rentbooks/:id', function(req, res) {
+    try { 
+        const id = parseInt(req.params.id);
+        const { username, numberofbooks, bookname, issuedate } = req.body;
+
+        let user = userdata.find(u => u.id === id);
+        if (!user) {
+            return res.status(404).json({
+                message: "Data not found"
+            });
+        }
+
+        
+        user.username = username || user.username;
+        user.bookname = bookname || user.bookname;
+        
+        
+        if (numberofbooks) {
+            user.numberofbooks = (user.numberofbooks[0] || 0) + 1;
+        }
+
+        
+        user.issuedate = issuedate || user.issuedate;
+
+        res.json(user);
+        console.log(JSON.stringify(user));
+    } catch (err) {
+        console.log(err);
+        res.status(400).json({
+            message: "Data improper"
+        });
+    }
+});
+
 //request
 // {   
 //     "username":"chitresh",
