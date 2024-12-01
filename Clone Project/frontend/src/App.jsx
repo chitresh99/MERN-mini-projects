@@ -21,6 +21,7 @@ function App() {
     <Workflow/>
     <Pricing/>
     <Testimonials/>
+    <Footer/>
     <Outlet/>
     </>
   )
